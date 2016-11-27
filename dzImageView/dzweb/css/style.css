@@ -1,0 +1,405 @@
+/* Styles for tags */
+
+body {
+    /*width: 1200px;
+	height: 750px;*/
+    overflow: hidden;
+    background: #FFF0F5;
+    font-family: Arial;
+}
+
+select { 
+    padding: 2px 10px; 
+}
+
+
+/* Styles for edit tools */
+
+.editTools {
+	color: darkblue; /*@editToolNonActiveColor*/
+    background: LightSteelBlue;
+    width: 100%;
+	height: 70px;
+}
+
+.editTools-Active {
+	color: DarkGoldenRod; /*#B8860B*/
+	background: Wheat; /*#F5DEB3*/
+    width: 100%;
+	height: 70px;
+
+    /* border */ 
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 9px;
+    border-color: #B8860B;
+}
+
+.editTools-Active i {
+    color: #B8860B;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.imageNameUnderEdit {
+    font-size: 14px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+#chbEdit .fa-pencil-square {
+    color: darkblue; /*@editToolNonActiveColor*/
+}
+
+#tdEditTools5 button:disabled * {
+    color: #F5DEB3;
+}
+
+#btnSaveEdit:enabled, #btnUndo:enabled {
+    color: red;
+    font-weight: bold;
+    box-shadow: 1px 1px 11px #330033;
+}
+
+#btnSaveEdit:enabled i, #btnUndo:enabled i {
+    color: red;
+    font-weight: bold;
+}
+
+#sltSelectImage { 
+    overflow: hidden; 
+    color: #EEE; 
+    width: 390px;
+    font-size: 14px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 11px #330033;
+    background: #DA70D6; 
+}
+
+#sltType { 
+    overflow: hidden; 
+    border: 3px; 
+    border-color: #B8860B;
+    width: 150px;
+    font-size: 14px;
+    color: #F5DEB3;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    background: #CD853F;	 
+}
+
+#btnPolygonClose {
+    color: #B8860B;
+}
+
+#colorPicker {
+    color:  #B8860B;
+}
+
+
+/* Styles for annotation table */
+
+.annotationTitleTd {
+    height: 30px;
+    word-wrap: break-word;
+    color: darkblue;
+    background: lightblue;
+    font-weight: bolder;
+    padding-left: 5px;
+    overflow: hidden;
+    white-space:pre-wrap;
+}
+
+.annotationTextTd {
+    width: 300px;
+    word-wrap: break-word;
+    background: lightblue;
+    color: darkblue;
+    font-size: 14px;
+    overflow: hidden;
+    white-space:pre-wrap;
+    padding-bottom: 20px;
+}
+
+.layerTr {
+    background: darkblue;
+}
+
+.layerTr td {
+    background: darkblue;
+}
+
+.layerExpandTd checkbox * {
+    padding: 5px;
+}
+
+.layerTd {
+    width: 300px;
+    height: 50px;
+    word-wrap: break-word;
+    font-weight: bold;
+    color: #FF8C00;  
+}
+
+#tblAnnotation {
+    border-collapse: collapse;
+    background: lightblue;
+}
+
+.aroundAnnTable {
+    border: 1px solid;
+    border-color: darkblue;
+    background: lightblue;
+}
+
+.smallItalicInLayerTitle {
+    font-size: 12px;
+    color: lightblue;
+}
+
+.annotationTh {
+    height: 20px;
+    background: yellow;
+    color: blue;
+    font-size: 16px;
+}
+
+
+/* Styles for Content table */
+
+#seadragon-viewer {
+    width: 1200px; 
+    height: 715px
+}
+
+#divMain {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#tdAnn {
+    width: 390px;
+    vertical-align: top;
+}
+
+
+/* Edit layer and selected areas modal windows */
+
+#divSelectionRegionDefinition {
+	width: 500px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: green;
+	border: 3px solid lightblue;
+    border-radius: 20px;
+}
+
+#btnSave {
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	top: 270px;
+	left: 260px;
+}
+
+#btnCancel {
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	top: 270px;
+	left: 380px;
+}
+
+#lblLayer {
+	width: 350px;
+	height: 20px;
+	position: absolute;
+	top: 25px;
+	left: 20px;
+}
+
+#sltLayer {
+	width: 350px;
+	height: 25px;
+	position: absolute;
+	top: 45px;
+	left: 20px;
+}
+
+#txtNewLayer {
+	width: 350px;
+	height: 20px;
+	position: absolute;
+	top: 45px;
+	left: 20px;
+}
+
+#btnNewLayer {
+	width: 100px;
+	height: 25px;
+	position: absolute;
+	top: 45px;
+	left: 380px;
+    font-size: 10px;
+}
+
+#lblTitle {
+	width: 350px;
+	height: 20px;
+	position: absolute;
+	top: 85px;
+	left: 20px;
+}
+
+#txtTitle {
+	width: 350px;
+	height: 20px;
+	position: absolute;
+	top: 105px;
+	left: 20px;
+}
+
+#lblAnnotation {
+	width: 350px;
+	height: 20px;
+	position: absolute;
+	top: 145px;
+	left: 20px;
+}
+
+#txaAnnotation {
+	width: 350px;
+	height: 70px;
+	position: absolute;
+	top: 165px;
+	left: 20px;
+}
+
+#divAnnotationTitle {
+    color: darkblue;
+    background: yellow;
+    height: 20px;
+    width: 390px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    border-color: darkblue;
+    border: 1px solid;
+}
+
+textarea {
+   resize: none;
+}
+
+
+/* Awesome font classes */
+
+.fa-trash {
+    color: brown;
+}
+
+.fa-trash-o {
+    color: #FF8C00;
+}
+
+.fa-pencil {
+    color: #FF8C00;
+}
+
+.fa-pencil-square {
+    color: darkblue;
+}
+
+.fa-arrow-circle-up {
+    color: darkblue;
+}
+
+.fa-arrow-circle-down {
+    color: darkblue;
+}
+
+.fa-caret-square-o-down {
+    color: #FF8C00;
+}
+
+.fa-caret-square-o-right {
+    color: #FF8C00;
+}
+
+.fa-caret-right {
+    color: darkblue;
+}
+
+.fa-caret-down {
+    color: darkblue;
+}
+
+.fa-toggle-on {
+    color: #FF8C00;
+}
+
+.fa-toggle-off {
+    color: #FF8C00;
+}
+
+.fa-toggle-off {
+    color: brown;
+}
+
+.fa-circle {
+    color: darkblue;
+}
+
+.fa-circle-o {
+    color: darkblue;
+}
+
+.fa-flag-checkered {
+    color: blue !important
+}
+
+
+/* Annotation table scrollbar styles */
+
+.scrollBox
+{
+    height: 695px;
+    overflow: auto;
+}
+
+::-webkit-scrollbar 
+{
+    width: 12px;
+    height: 12px;
+    background: white;
+}
+
+::-webkit-scrollbar-track 
+{
+    border: 1px solid yellowgreen;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: yellowgreen;  
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover 
+{
+    background: #88ba1c;  
+}

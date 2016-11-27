@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "dzImageUpload", "dzImageUpload\dzImageUpload.njsproj", "{5E5C8C8E-40F3-4D0A-ABFC-9CD0DD8B0055}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dzImagePyramidBuilder", "dzImagePyramidBuilder", "{4BE18B7B-26AD-475A-BF78-EBDE02E6BA27}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "dzRepoLib", "dzImagePyramidBuilder\src\dzRepoLib\dzRepoLib.xproj", "{A926EA22-913C-44AA-9FF3-BC9C6D639414}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "dzComposerLib", "dzImagePyramidBuilder\src\dzComposerLib\dzComposerLib.xproj", "{64F67CEB-39DD-45A9-BFED-058A66983FE1}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "dzImagePyramidBuilder", "dzImagePyramidBuilder\src\dzImagePyramidBuilder\dzImagePyramidBuilder.xproj", "{72E996AF-88B9-444C-92B5-3DD226A450BD}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "dzImageView", "dzImageView\dzImageView.njsproj", "{BED596A6-F354-4099-9B7B-FF78DC22C1A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E5C8C8E-40F3-4D0A-ABFC-9CD0DD8B0055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E5C8C8E-40F3-4D0A-ABFC-9CD0DD8B0055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E5C8C8E-40F3-4D0A-ABFC-9CD0DD8B0055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E5C8C8E-40F3-4D0A-ABFC-9CD0DD8B0055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A926EA22-913C-44AA-9FF3-BC9C6D639414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A926EA22-913C-44AA-9FF3-BC9C6D639414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A926EA22-913C-44AA-9FF3-BC9C6D639414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A926EA22-913C-44AA-9FF3-BC9C6D639414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F67CEB-39DD-45A9-BFED-058A66983FE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F67CEB-39DD-45A9-BFED-058A66983FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F67CEB-39DD-45A9-BFED-058A66983FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F67CEB-39DD-45A9-BFED-058A66983FE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E996AF-88B9-444C-92B5-3DD226A450BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E996AF-88B9-444C-92B5-3DD226A450BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E996AF-88B9-444C-92B5-3DD226A450BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E996AF-88B9-444C-92B5-3DD226A450BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED596A6-F354-4099-9B7B-FF78DC22C1A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED596A6-F354-4099-9B7B-FF78DC22C1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED596A6-F354-4099-9B7B-FF78DC22C1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED596A6-F354-4099-9B7B-FF78DC22C1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A926EA22-913C-44AA-9FF3-BC9C6D639414} = {4BE18B7B-26AD-475A-BF78-EBDE02E6BA27}
+		{64F67CEB-39DD-45A9-BFED-058A66983FE1} = {4BE18B7B-26AD-475A-BF78-EBDE02E6BA27}
+		{72E996AF-88B9-444C-92B5-3DD226A450BD} = {4BE18B7B-26AD-475A-BF78-EBDE02E6BA27}
+	EndGlobalSection
+EndGlobal

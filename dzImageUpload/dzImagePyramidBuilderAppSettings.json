@@ -1,0 +1,7 @@
+﻿{
+  "Directories": {
+    "uploadsDir": "/uploads/",
+    "imagesDir": "/images/",
+    "outputDir": "/dzImageView/dzweb/images/"
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+		
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "noLib": false,
+		"outDir": "../js/selectedRegion",
+		
+		"sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": false
+    },
+	
+	"files":[	
+		"selectedRegion.ts",
+		"selectedRegionRectangle.ts",
+		"selectedRegionCircle.ts",
+		"selectedRegionPolygon.ts"
+    ]
+}

@@ -1,0 +1,2 @@
+cd dzImageView
+node server

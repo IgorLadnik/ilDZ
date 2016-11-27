@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  
+  <script src="settings.js"></script>
+  <script src="openseadragon/openseadragon.min.js"></script>
+  <script src="socket.io/socket.io.js"></script>
+  <script src="jscolor/jscolor.js"></script>
+
+  <script src="js/singleton.js"></script>
+
+  <script src="js/page/page.js"></script>
+  <script src="js/page/pageGlobal.js"></script>
+  <script src="js/page/pageAnnotation.js"></script>
+  <script src="js/page/pageDefSelReg.js"></script>
+  <script src="js/page/pageDefLayer.js"></script>
+
+  <script src="js/global.js"></script>
+  <script src="js/layerCollection.js"></script>
+  <script src="js/layer.js"></script>
+  <script src="js/tip.js"></script>
+
+  <script src="js/transform.js"></script>
+
+  <script src="js/selectedRegion/selectedRegion.js"></script>
+  <script src="js/selectedRegion/selectedRegionRectangle.js"></script>
+  <script src="js/selectedRegion/selectedRegionCircle.js"></script>
+  <script src="js/selectedRegion/selectedRegionPolygon.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  
+  <head>
+    <title>Deep Zoom Viewer</title>
+  </head>
+
+  <body>
+    <!-- Definition Page -->
+	<div id="divSelectionRegionDefinition" hidden>
+        <label id="lblLayer"></label>
+        <select id="sltLayer"></select>
+		<button id="btnNewLayer"></button>
+        <input id="txtNewLayer" type="text" />
+		<label id="lblTitle"></label>
+		<input id="txtTitle" type="text" />
+        <label id="lblAnnotation"></label>
+        <textarea id="txaAnnotation" type="text"></textarea>
+		<button id="btnSave"></button>
+		<button id="btnCancel"></button>
+	</div>
+
+	<div id="divMain">
+        <!-- Edit Tool Table -->
+		<table class="editTools">
+			<tr>
+                <td id="tdImage" style="width:400px" align="left">
+                    <label id="lblSelectImage" for="sltSelectImage" style="padding-left:5px"></label>
+                    <div style="display:table-cell;vertical-align:bottom">
+                        <select id="sltSelectImage" style="width:380px"></select>
+                        <label id="lblSelectImageValue" ></label>
+                    </div>
+                </td>
+
+                <td style="width:50px" align="center">
+                    <label id="lblPanelSwap" for="devPanelSwap"></label>
+                    <div id="devPanelSwap" style="display:table-cell;vertical-align:bottom" />
+                </td>
+
+				<td style="width:50px" align="center">
+                    <label id="lblEdit" for="devEdit"></label>
+                    <div id="devEdit" style="display:table-cell;vertical-align:bottom" />
+				</td>
+
+				<td id="tdEditTools1" style="width:400px" align="center">
+					<label id="lblType" for="sltType"></label>
+                    <div style="display:table-cell;vertical-align:bottom">
+                        <select id="sltType"></select>
+                        <button id="btnPolygonClose"></button>
+                    </div>
+				</td>
+
+				<td id="tdEditTools2" align='right' style="width:50px">
+					<div id="divColor" style="width:40px;height:30px;"></div>
+				</td>
+
+				<td id="tdEditTools3" align='left' style="width:100px;height:25px">
+					<table style="height:25px">
+						<tr>
+							<td>
+								<input type="radio" id="rdoFrame" style="height:12px" checked />
+								<label id="lblFrame" for="rdoFrame" style="font-size:12px"></label>
+							</td>
+						</tr>
+						<tr >
+							<td>
+								<input type="radio" id="rdoBackground" style="height:12px" value="thick" />
+								<label id="lblBackground" for="rdoBackground" style="font-size:12px"></label>
+							</td>
+						</tr>
+					</table>
+				</td>
+
+				<td id="tdEditTools4" style="width:100px;height:25px" align="left">
+					<button class="jscolor {valueElement:'valueSpan',styleElement:'styleSpan',onFineChange:'updateColor(this)'}"
+								id="colorPicker" style="width:70px;height:20px"></button>
+				</td>
+
+                <td id="tdEditTools5" align="center" style="width:120px">
+                    <table>
+                        <tr>
+                            <td align="center">
+                                <label id="lblFrameThicknessTitle" style="font-size:12px"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <button id="btnThickerFrame" style="width:25px" align="left"><i class="fa fa-chevron-circle-up"></i></button>
+                                <label id="lblFrameThickness" style="width:45px;font-weight:bold;padding-left:5px;padding-right:5px"></label>
+                                <button id="btnThinnerFrame" style="width:25px" align="right"><i class="fa fa-chevron-circle-down"></i></button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td id="tdEditTools6" style="width:100px" align="right">
+                    <button id="btnUndo"><i class="fa fa-chevron-circle-down"></i></button>
+                </td>
+
+                <td id="tdEditTools7" style="width:100px;height:40px" align="right">
+                    <button id="btnSaveEdit" style="height:40px"></button>
+                </td>
+
+				<td id="tdEditTools8" align="right">
+                    <div id="devImageListUpdate" style="display:table-cell;vertical-align:bottom" />
+                </td>
+			</tr>
+		</table>
+
+		<!-- Content Table -->
+		<table id="tblContent">
+			<tr>
+                <!-- Image Column -->
+				<td id="tdOsd">
+					<div id="seadragon-viewer"></div>
+					<script src="js/mainDz.js" onload="startUp()"></script>
+				</td>
+
+				<!-- Annotation Column @ Right-hand Side -->
+				<td id="tdAnn">
+                    <div id ="divAnnotationTitle"></div>
+                    <div class="scrollBox aroundAnnTable">
+                        <table id="tblAnnotation"></table>
+                    </div>
+                </td>
+			</tr>
+		</table>
+	</div>
+  </body>
+</html>
+

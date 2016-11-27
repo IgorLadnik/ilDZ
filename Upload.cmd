@@ -1,0 +1,2 @@
+cd dzImageUpload
+node server

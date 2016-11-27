@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "dzImagePyramidBuilder": {
+      "commandName": "Project",
+      "commandLineArgs": "Chateau_de_Chambord.JPG-1477323717783"
+    }
+  }
+}
