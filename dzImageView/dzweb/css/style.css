@@ -169,7 +169,6 @@ select {
 }
 
 #tdOsd {
-	
 	height: 95%;
 }
 
@@ -177,6 +176,10 @@ select {
 	width: 390px;
 	height: 100%;
 	vertical-align: top;
+}
+
+#divAnnotation {
+	border: solid blue 1px;
 }
 
 #tblAnnotation {
@@ -187,7 +190,6 @@ select {
 #seadragon-viewer {
     width: 100%; 
     height: 100%;
-	border: solid blue 1px;
 }
 
 #divMain {
@@ -383,7 +385,7 @@ textarea {
 
 .scrollBox
 {
-    height: 98%; /*695px;*/
+    height: 91%;
     overflow: auto;
 }
 
