@@ -15,18 +15,22 @@ select {
 
 /* Styles for edit tools */
 
+.tdEditToolsTable {
+	height: 70px; /*@toolbarHeight*/
+}
+
 .editTools {
 	color: darkblue; /*@editToolNonActiveColor*/
     background: LightSteelBlue;
     width: 100%;
-	height: 70px;
+	height: 70px; /*@toolbarHeight*/
 }
 
 .editTools-Active {
 	color: DarkGoldenRod; /*#B8860B*/
 	background: Wheat; /*#F5DEB3*/
     width: 100%;
-	height: 70px;
+	height: 70px;  /*@toolbarHeight*/
 
     /* border */ 
     border-style: solid;
@@ -168,9 +172,11 @@ select {
 	height: 100%;
 }
 
+/*
 #tdOsd {
 	height: 95%;
 }
+*/
 
 #tdAnn {
 	width: 390px;
@@ -385,7 +391,7 @@ textarea {
 
 .scrollBox
 {
-    height: 91%;
+    height: 98%;
     overflow: auto;
 }
 
