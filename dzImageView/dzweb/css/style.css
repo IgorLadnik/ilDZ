@@ -385,7 +385,7 @@ textarea {
 
 .scrollBox
 {
-    height: 98%;
+    /*height: 98%;*/ /* Per cents do not work in FireFox */
     overflow: auto;
 }
 
