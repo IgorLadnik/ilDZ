@@ -1,4 +1,6 @@
 ﻿function PageInit(imageNames, startupCallback) {
+	setDivAnnotationHeightInPx();
+	
     var firstItem;
     this.callback = startupCallback;
     if (imageNames.length > 0) {

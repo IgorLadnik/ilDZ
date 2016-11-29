@@ -35,6 +35,16 @@ function enableElement(element, isEnabled) {
 }
 
 
+// Scrolling of Annotation table - for FireFox
+
+function setDivAnnotationHeightInPx() {
+	var h = window.innerHeight - _getById('trToolBar').clientHeight - _getById('divAnnotationTitle').clientHeight - 15;
+	_getById('divAnnotation').style.height = h + 'px';
+	
+	window.onresize = setDivAnnotationHeightInPx;
+}
+
+
 // Color
 
 function defaultColor() {

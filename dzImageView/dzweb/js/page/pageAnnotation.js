@@ -12,8 +12,8 @@
 
     // Annotation table header
     _getById('divAnnotationTitle').textContent = TXT.AnnotationTableTitle;
-
-    var layers = getLayerCollection().layers;
+	
+	var layers = getLayerCollection().layers;
     if (layers.length > 0) {
         for (var i = layers.length - 1; i >= 0; i--) {
             var layer = layers[i];
