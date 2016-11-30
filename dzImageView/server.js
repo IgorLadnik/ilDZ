@@ -75,7 +75,9 @@ function checkSockets(socket) {
         else {
             // End image editing for disconnected socket
             var imageId = getEditedImageId(item.id);
+
             if (!isUndefined(imageId)) {
+                removeEditedSocketId(imageId);
                 sendToAllSocketsButThis(item.id, 'endEdit', { imageId: imageId });
 
                 if (!isUndefined(socket))
